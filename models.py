@@ -2,11 +2,21 @@
 from sqlalchemy import Column, Date, DateTime, ForeignKey, Integer, String, text
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-
+from API5 import db
 
 Base = declarative_base()
 metadata = Base.metadata
 
+Base = db.Model
+Column = db.Column
+Date = db.Date
+DateTime = db.DateTime
+ForeignKey = db.ForeignKey
+Integer = db.Integer
+String = db.String
+Text = db.Text
+text = db.text
+relationship = db.relationship
 
 class Device(Base):
     __tablename__ = 'device'
